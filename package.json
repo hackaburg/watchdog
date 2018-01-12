@@ -1,0 +1,16 @@
+{
+  "name": "watchdog",
+  "version": "1.0.0",
+  "description": "watches our website status and notifies via slack",
+  "main": "index.js",
+  "repository": "https://github.com/hackaburg/watchdog.git",
+  "author": "Michael Neu <git@michaeln.eu>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@slack/client": "^3.15.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
