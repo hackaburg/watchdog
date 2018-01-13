@@ -32,6 +32,10 @@ for (const signal of ["SIGTERM", "SIGINT", "SIGUSR1", "SIGUSR2"]) {
   });
 }
 
+(async () => {
+  await notify("watchdog started");
+})();
+
 function wake() {
   setTimeout(wake, 60 * 60 * 1000);
 }
