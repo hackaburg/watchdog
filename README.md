@@ -2,7 +2,7 @@
 
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/hackaburg/watchdog)](https://hub.docker.com/r/hackaburg/watchdog)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/hackaburg/watchdog)](https://hub.docker.com/r/hackaburg/watchdog)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/hackaburg/watchdog))](https://hub.docker.com/r/hackaburg/watchdog)
+[![MicroBadger Layers](https://img.shields.io/microbadger/layers/hackaburg/watchdog)](https://hub.docker.com/r/hackaburg/watchdog)
 
 If run inside a docker-compose setup, the watchdog will notify the configured Slack channel about its shutdown.
 
