@@ -2,7 +2,7 @@ const { IncomingWebhook } = require("@slack/webhook");
 const discord = require("discord.js");
 
 const slackToken = process.env.SLACK_WEBHOOK_URL;
-const discordURL = process.env.DISCORD_WEBHOOK_URL;
+const discordToken = process.env.DISCORD_WEBHOOK_URL;
 
 const slackHook, discordHook;
 
@@ -10,9 +10,9 @@ if (slackToken) {
   slackHook = new IncomingWebhook(slackToken);
 }
 
-if (discordURL) {
+if (discordToken) {
   // Structure of discord webhook URL: https://discord.com/api/webhooks/[id]/[token]
-  const discordCredentials = discordURL
+  const discordCredentials = discordToken
     .replace("https://discord.com/api/webhooks/", "")
     .split("/");
 
@@ -32,7 +32,7 @@ for (const signal of ["SIGTERM", "SIGINT", "SIGUSR1", "SIGUSR2"]) {
       });
     }
 
-    if (discordID && discordToken) {
+    if (discordToken) {
       discordHook.send(`received signal ${signal}, about to shut down!`);
     }
 
@@ -46,7 +46,7 @@ if (slackToken) {
   });
 }
 
-if (discordID && discordToken) {
+if (discordToken) {
   discordHook.send("watchdog started");
 }
 
